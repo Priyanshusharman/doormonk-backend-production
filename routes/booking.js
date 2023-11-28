@@ -67,7 +67,20 @@ router.post("/addappointment/:id", fetchUser, [body('time', "Enter a valid time"
         })
 
         res.json(appointment)
-
+        {/*const sendSMS = async (body) => {
+            let msgOptions = {
+                from: "+12512377382",
+                to: "+918840542151",
+                body
+            }
+            try {
+                const message = await client.messages.create(msgOptions)
+                console.log(message)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        sendSMS("Hi") */}
 
     }
     catch (error) {
